@@ -1,5 +1,4 @@
 ---
-title: An awesome article
 client: Lacerba
 thumbnail: /assets/images/uploads/unnamed.jpg
 ---
