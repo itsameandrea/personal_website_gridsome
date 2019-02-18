@@ -1,9 +1,13 @@
-// This is the main.js file. Import global CSS and scripts here.
-// The Client API can be used here. Learn more: gridsome.org/docs/client-api
-
+import Vuetify from 'vuetify'
 import DefaultLayout from '~/layouts/Default.vue'
 
-export default function (Vue, {router, head, isClient}) {
-  // Set default layout as a global component
+import 'vuetify/dist/vuetify.min.css'
+
+export default function (Vue, { head }) {
+  Vue.use(Vuetify)
   Vue.component('Layout', DefaultLayout)
+
+  head.script.push({
+    src: 'https://identity.netlify.com/v1/netlify-identity-widget.js'
+  })
 }

@@ -9,4 +9,14 @@ module.exports = function (api) {
   api.loadSource(store => {
     // Use the Data store API here: https://gridsome.org/docs/data-store-api
   })
+
+  api.chainWebpack((config, { isServer }) => {
+    if (isServer) {
+      config.externals([
+        nodeExternals({
+          whitelist: [/^vuetify/]
+        })
+      ])
+    }
+  })
 }
