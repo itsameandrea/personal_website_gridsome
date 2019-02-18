@@ -4,7 +4,8 @@
       <v-layout row wrap>
         <v-flex xs12>
           <div class="msg">
-            <ClientOnly>
+            Hello, I'm Andrea! It's good to e-meet you
+            <!-- <ClientOnly>
               <typewriter
                 :speed="200"
                 :full-erase="true"
@@ -13,7 +14,7 @@
                 :erase-delay="600">
                 Hello, I'm Andrea! I am a
               </typewriter>
-            </ClientOnly>
+            </ClientOnly> -->
           </div>
         </v-flex>
       </v-layout>
@@ -45,11 +46,7 @@
   </layout>
 </template>
 <script>
-import Typewriter from 'vue-typewriter'
 export default {
   name: 'Homepage',
-  components: {
-    Typewriter
-  }
 }
 </script>
