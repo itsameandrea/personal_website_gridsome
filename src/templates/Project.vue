@@ -5,8 +5,8 @@
 </template>
 
 <page-query>
-query Project ($path: String!) {
-  project: project (path: $path) {
+query Projects ($path: String!) {
+  project: projects (path: $path) {
     title
     content
   }

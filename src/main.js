@@ -1,14 +1,13 @@
 import DefaultLayout from '~/layouts/Default.vue'
 
 import Vuetify from 'vuetify'
-import Typewriter from 'vue-typewriter'
+// import Typewriter from 'vue-typewriter'
 
 import 'vuetify/dist/vuetify.min.css'
 
 import colors from 'vuetify/es5/util/colors'
 
 export default function (Vue, { head }) {
-  console.log(colors.blue.darken1)
   Vue.use(Vuetify, {
     theme: {
       primary: colors.red.darken2, // a color that is not in the material colors palette
@@ -21,7 +20,7 @@ export default function (Vue, { head }) {
     }
   })
 
-  Vue.use(Typewriter)
+  // Vue.use(Typewriter)
 
   Vue.component('Layout', DefaultLayout)
 

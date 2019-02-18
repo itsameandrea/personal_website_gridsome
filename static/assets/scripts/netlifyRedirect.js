@@ -1,6 +1,5 @@
-console.log('Redirect Loaded!')
 
-if (window.netlifyIdentity) {
+if (window || window.netlifyIdentity) {
   window.netlifyIdentity.on("init", user => {
     if (!user) {
       window.netlifyIdentity.on("login", () => {

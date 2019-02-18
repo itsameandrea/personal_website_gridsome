@@ -4,14 +4,16 @@
       <v-layout row wrap>
         <v-flex xs12>
           <div class="msg">
-            <typewriter
-              :speed="200"
-              :full-erase="true"
-              :start-delay="600"
-              :words='["Developer","Maker", "Barista"]'
-              :erase-delay="600">
-              Hello, I'm Andrea! I am a
-            </typewriter>
+            <ClientOnly>
+              <typewriter
+                :speed="200"
+                :full-erase="true"
+                :start-delay="600"
+                :words='["Developer","Maker", "Barista"]'
+                :erase-delay="600">
+                Hello, I'm Andrea! I am a
+              </typewriter>
+            </ClientOnly>
           </div>
         </v-flex>
       </v-layout>
@@ -43,7 +45,11 @@
   </layout>
 </template>
 <script>
+import Typewriter from 'vue-typewriter'
 export default {
   name: 'Homepage',
+  components: {
+    Typewriter
+  }
 }
 </script>
