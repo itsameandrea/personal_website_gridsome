@@ -1,0 +1,29 @@
+page-enter-active, .page-leave-active {
+  transition: all .30s ease-out;
+}
+
+.page-enter, .page-leave-active {
+  opacity: 0;
+  transform-origin: 50% 50%;
+}
+
+.msg {
+  padding: 20px;
+  font-size:45px;
+  text-align: center;
+  font-weight: 100;
+}
+
+.typewriter-msg {
+  color: #D32F2F;
+  border-bottom: 2px solid #D32F2F;
+  font-weight: 600;
+}
+
+.typewriter-cursor {
+  opacity: 1;
+  animation: blink 0.7s infinite;
+  position: relative;
+  top: -3px;
+  left: -12px;
+}

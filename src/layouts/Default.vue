@@ -1,16 +1,37 @@
 <template>
-  <div class="layout">
-    <header class="header">
-      <strong>
-        <g-link :to="{ name: 'home' }">{{ $static.metaData.siteName }}</g-link>
-      </strong>
-      <nav class="nav">
-        <g-link class="nav__link" :to="{ name: 'home' }">Home</g-link>
-        <g-link class="nav__link" :to="{ name: 'about' }">About</g-link>
-      </nav>
-    </header>
-    <slot/>
-  </div>
+  <v-app>
+    <v-toolbar class="elevation-0 py-1" color="transparent">
+      <v-spacer></v-spacer>
+      <v-toolbar-title>
+        <g-link to="/">
+          <img class="brand-img" height="50" src="/assets/images/logo.png" alt="logo" />
+        </g-link>
+      </v-toolbar-title>
+      <v-spacer></v-spacer>
+    </v-toolbar>
+    <v-content>
+      <slot/>
+    </v-content>
+    <v-footer dark height="auto">
+      <v-card class="flex" flat tile>
+        <v-card-actions class="grey darken-3 justify-center">
+          &copy; ilrock
+          <v-spacer></v-spacer>
+
+          <v-btn
+            v-for="social in socials"
+            :key="social.name"
+            :href="social.url"
+            target="_blank"
+            class="mx-3"
+            dark
+            icon>
+            <v-icon size="24px">{{ social.icon }}</v-icon>
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-footer>
+  </v-app>
 </template>
 
 <static-query>
@@ -21,30 +42,18 @@ query {
 }
 </static-query>
 
-<style>
-body {
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-  margin:0;
-  padding:0;
-  line-height: 1.5;
+<script>
+export default {
+  data () {
+    return {
+      socials: [
+        {
+          name: 'Twitter',
+          icon: 'fab fa-twitter',
+          url: 'https://twitter.com/ilrock__'
+        }
+      ]
+    }
+  }
 }
-
-.layout {
-  max-width: 760px;
-  margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-  height: 80px;
-}
-
-.nav__link {
-  margin-left: 20px;
-}
-</style>
+</script>
