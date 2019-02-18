@@ -10,4 +10,8 @@ export default function (Vue, { head }) {
   head.script.push({
     src: 'https://identity.netlify.com/v1/netlify-identity-widget.js'
   })
+
+  head.script.push({
+    src: 'assets/scripts/netlifyRedirect.js'
+  })
 }
