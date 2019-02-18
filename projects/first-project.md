@@ -1,6 +1,9 @@
 ---
 client: Lacerba
-thumbnail: /assets/images/uploads/unnamed.jpg
+activity: Full-stack Development
+date: 2019-02-18T16:20:27.020Z
+link: 'https://lacerba.io'
+thumbnail: /assets/images/logo-green-text.png
 ---
 
 ## An awesome project
