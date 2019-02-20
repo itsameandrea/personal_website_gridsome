@@ -1,12 +1,19 @@
 <template>
   <Layout>
-    <div v-html="$page.project.content"/>
+    <v-container grid-list-xs>
+      <v-layout row wrap>
+        <v-flex xs12 v-html="$page.project.content">
+          
+        </v-flex>
+      </v-layout>
+    </v-container>
+    <!-- <div v-html="$page.project.content"/> -->
   </Layout>
 </template>
 
 <page-query>
-query Projects ($path: String!) {
-  project: projects (path: $path) {
+query Project ($path: String!) {
+  project: project (path: $path) {
     title
     content
   }

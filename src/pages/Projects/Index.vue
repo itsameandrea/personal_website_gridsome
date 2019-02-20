@@ -31,8 +31,8 @@
 </template>
 
 <page-query>
-query Projects {
-  projects: allProjects {
+query Project {
+  projects: allProject {
     edges {
       node {
         title
