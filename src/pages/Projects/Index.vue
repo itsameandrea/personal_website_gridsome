@@ -13,7 +13,7 @@
       </v-layout>
       <v-container grid-list-xs>
         <v-layout row wrap>
-          <v-flex v-for="(project, index) in $page.projects.edges" :key="index" xs12 md5>
+          <v-flex v-for="(project, index) in $page.projects.edges" :key="index" xs12 md6 mb-5>
             <v-card class="mx-3" hover :to="project.node.path">
               <v-img :src="project.node.galleryImages[0]" aspect-ratio="2.75"></v-img>
               <v-card-title class="pa-3" primary-title>
