@@ -13,15 +13,25 @@
       </v-layout>
       <v-container grid-list-xs>
         <v-layout row wrap>
-          <v-flex v-for="(project, index) in $page.projects.edges" :key="index" xs12 md4>
+          <v-flex v-for="(project, index) in $page.projects.edges" :key="index" xs12 md5>
             <v-card class="mx-3" hover :to="project.node.path">
-              <v-img :src="project.node.thumbnail.src" aspect-ratio="2.75"></v-img>
-              <v-card-title primary-title>
+              <v-img :src="project.node.galleryImages[0]" aspect-ratio="2.75"></v-img>
+              <v-card-title class="pa-3" primary-title>
                 <div>
-                  <h3 class="headline mb-0">{{ project.node.client }}</h3>
+                  <h4 class="title mb-0">{{ project.node.client }}</h4>
+
                   <!-- <div>{{ project.what }}</div> -->
                 </div>
               </v-card-title>
+              <v-card-text class="pt-0">
+                <v-chip 
+                  v-for="(tag, index) in project.node.tags" 
+                  :key="index" 
+                  color="secondary" 
+                  text-color="white">
+                    {{ tag.split('/')[tag.split('/').length - 1] }}
+                </v-chip>
+              </v-card-text>
             </v-card>
           </v-flex>
         </v-layout>
@@ -38,7 +48,8 @@ query Project {
         title
         path
         client
-        thumbnail
+        tags
+        galleryImages
       }
     }
   }
