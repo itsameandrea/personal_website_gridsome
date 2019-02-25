@@ -1,7 +1,6 @@
 import DefaultLayout from '~/layouts/Default.vue'
 
 import Vuetify from 'vuetify'
-// import Typewriter from 'vue-typewriter'
 
 import 'vuetify/dist/vuetify.min.css'
 
@@ -19,8 +18,6 @@ export default function (Vue, { head }) {
       success: colors.green.accent3
     }
   })
-
-  // Vue.use(Typewriter)
 
   Vue.component('Layout', DefaultLayout)
 

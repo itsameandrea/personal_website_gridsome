@@ -37,7 +37,6 @@ query Posts {
       node {
         title
         path
-        thumbnail
       }
     }
   }
@@ -46,8 +45,6 @@ query Posts {
 
 <script>
 export default {
-  mounted () {
-    console.log(this.$page.posts)
-  }
+
 }
 </script>
