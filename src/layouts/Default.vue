@@ -61,6 +61,16 @@ export default {
           name: 'Twitter',
           icon: 'fab fa-twitter',
           url: 'https://twitter.com/ilrock__'
+        },
+        {
+          name: 'GitHub',
+          icon: 'fab fa-github',
+          url: 'https://github.com/ilrock'
+        },
+        {
+          name: 'BitBucket',
+          icon: 'fab fa-bitbucket',
+          url: 'https://bitbucket.org/ilrock'
         }
       ]
     }
