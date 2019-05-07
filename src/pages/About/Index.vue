@@ -40,8 +40,6 @@
 
             My curiosity naturally led me to several career switches. I started things off working as web developer. I then moved onto logistics, product management, digital advertising and, eventually, freelance development. Basically, it took me a few years to understand that I wanted to do what I actually started with.
 
-            My curiosity led me to several career switches as I wanted to find the place where I could really bring value. I started as a web developer, then I worked in logistics, product management, digital advertising and eventually as a freelance developer.
-
             While working as a freelance developer, I had the chance to work together with many brilliant individuals on terrific projects. Who knew that I could work on a platform to help terminal diseases researchers. And what about that other platform that is bringing digital knowledge to people in Italy.
 
             Although I started off as a back-end developer, I now like to mess around with the the full stack. Especially since I got into Vue.js. My favorite stack at the moment includes Ruby on Rails on the server end and Vue.js (Nuxt) on the client. In the last 6 months, I’ve also started digging into serverless architectures and, I’ve got to say I’ve been enjoying the ride and have launched a couple of products as well.
